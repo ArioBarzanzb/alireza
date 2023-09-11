@@ -1,0 +1,74 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a{
+    text-decoration: none;
+    transition-duration: 0.3s;
+    color: #ffffff;
+    margin-right: 10px;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    background-color: rgb(41, 39, 39);
+    border-radius: 0px 0px 10px 10px;
+}
+
+.loginRegister {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.loginRegister a:hover{
+    color: darkcyan;
+    }
+
+.-home{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+} 
+.-home a{
+    transition-duration: 0.3s;
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+.-home a:hover{
+color: darkcyan;
+}
+
+.footer{
+    background-color: rgb(41, 39, 39);
+    height: 8vh;
+    margin-top: 82vh;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.telegram{
+    color: #4a6ddf;
+}
+.instagram{
+    color: rgb(136, 47, 136);
+}
