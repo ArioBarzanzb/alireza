@@ -26,52 +26,32 @@
     --size-8xl:6rem;
     --size-9xl:8rem;
     --size-10xl:10rem;
+    
 }
 
-
-
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'Courier New', Courier, monospace;
-    line-height: calc(1em +0.5rem);
-}
-
-html{
-    scroll-behavior: smooth;
-}
-
-body{
-    background-color: var(--clr-dark);
+.footer-copyright-socials-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     color: var(--clr-light);
+    flex-direction: column;
+    background-color: #94a3b8;
+    height: 30vh;
+    margin-bottom: 0;
 }
 
-img,
-picture,
-video,
-canvas,
+.footer-copyright-socials-item{
+    font-size: var(--size-3xl);
+    color: var(--clr-light);
+    -webkit-tap-highlight-color: var(--clr-light);
+    width: var(--size-4xl);
+    height: var(--size-4xl);
+}
+
 svg{
-    display: block;
-    max-width: 100%;
-    user-select: none;
-    color: var(--clr-light);
+     color: var(--clr-light);
 }
 
-button{
-    display: inline-block;
-    padding: 0;
-    border: none;
-    background: none;
-    cursor: pointer;
-    color: inherit;
+path{
+    color: var(--clr-lightzzgg);
 }
-
-a{
-    color: var(--clr-rose);
-    text-decoration: none;
-}
-
-strong{
-    color: var(--clr-indigo);
-}
-
