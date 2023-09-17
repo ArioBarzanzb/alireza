@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{%block title%}Lirez{%endblock%}</title>
+    <link rel="stylesheet" href="{% static 'lirez/styles.css' %}">
+</head>
+<body>
+    
+        <header class="header container">
+            <nav>
+                <ul class="header__menu">
+                    <li>
+                        <a class ="header__link"href="{%url 'home'%}">Home</a>
+                    </li>
+                    <li>
+                        <a class ="header__link"href="{%url 'courses'%}">Courses</a>
+                    </li>
+                    <li>
+                        <a class ="header__link"href="{%url 'staff'%}">Staff</a>
+                    </li>
+    
+                    <li>
+                        <a href="{%url 'dashboard'%}" class="header__link">dashboard</a>
+                    </li>
+    
+                    <li>
+                        <a href="{%url 'register'%}" class="header__link">Register</a>
+                    </li>
+    
+                    <li>
+                       <a class ="header__login btn" href="{%url 'login'%}">Login</a> 
+                    </li>
+    
+                </ul>
+                <button class="header__bars">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+                      </svg>                  
+                </button>
+            </nav>
+    
+            
+        </header>
+        <main>
+            {%block body%}
+            {%endblock%}
+        </main>
+        <footer class="footer container">
+    
+        <!-- Remove the container if you want to extend the Footer to full width. -->
+    <div class="container my-5">
+        <!-- Footer -->
+        <footer>
+            <div class="footer">
+                <div class="about">
+                    <h3>About Us</h3>
+                    <p>We are a company dedicated to providing the best service to our customers.</p>
+                </div>
+                <div class="contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@company.com</p>
+                    <p>Phone: 123-456-7890</p>
+                </div>
+                <div class="copyright">
+                    <p>© 2023 Company Name. All rights reserved.</p>
+                </div>
+            </div>  
+        </footer>
+        
+</body>
+</html>
