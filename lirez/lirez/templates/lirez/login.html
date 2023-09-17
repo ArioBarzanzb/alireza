@@ -2,5 +2,30 @@
 
 {%block title%}Lirez - Login{%endblock%}
 {%block body%}
+{{message}}
+<div class="login-container">
+    <div class="form">
+      <h1>Login</h1>
+      <form action="{%url 'login'%}" method="POST">
+        {% csrf_token %}
+        <div class="form__group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form__group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        
 
+        <div class="form__group">
+          <button type="submit" class="btn form__submit">Login</button>
+        </div>
+      </form>
+      <p>Don't have an account? <a href="{%url 'register'%}">Register</a></p>
+    </div>
+</div>
+
+  
 {%endblock%}
+
