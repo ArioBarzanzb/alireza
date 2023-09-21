@@ -26,9 +26,13 @@
                 </li>
 
                 <li>
-                    <a href="{%url 'dashboard'%}" class="header__link">dashboard</a>
+                    <a href="{%url 'dashboard'%}" class="header__link">Dashboard</a>
                 </li>
-
+                {% if user.is_authenticated and user|is_teacher %}
+                    <li>
+                        <a href="{%url 'create'%}" class="header__link">Create Course</a>
+                    </li>
+                {% endif %}
                 <li class="header__line"></li>
 
                 <li >
@@ -37,13 +41,19 @@
                     </svg>                      
                 </li>
 
+                {% if user.is_authenticated %}
+                <li>
+                    <a href="{% url 'logout' %}" class="header__link">Log Out</a>
+                </li>
+                {%else%}
                 <li>
                     <a href="{%url 'register'%}" class="header__link">Register</a>
                 </li>
 
                 <li>
-                   <a class ="header__login btn" href="{%url 'login'%}">Login</a> 
+                    <a class="header__login btn" href="{%url 'login'%}">Login</a>
                 </li>
+                {%endif%}
 
             </ul>
 
@@ -66,8 +76,13 @@
                         <ul class="mobile-nav__menu">
                             <li><a href="{%url 'home'%}" class="mobile-nav__link">Home</a></li>
                             <li><a href="{%url 'courses'%}" class="mobile-nav__link">Courses</a></li>
-                            <li><a href="{%url 'staff'%}" class="mobile-nav__link">staff</a></li>
-                            <li><a href="{%url 'dashboard'%}" class="mobile-nav__link">dashboard</a></li>
+                            <li><a href="{%url 'staff'%}" class="mobile-nav__link">Staff</a></li>
+                            <li><a href="{%url 'dashboard'%}" class="mobile-nav__link">Dashboard</a></li>
+                            {% if user.is_authenticated and user|is_teacher %}
+                                <li>
+                                    <a href="{%url 'create'%}" class="mobile-nav__link">Create Course</a>
+                                </li>
+                            {% endif %}
                             <li class="mobile-nav__link-line"></li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mobile-nav__theme-toggle">
@@ -76,14 +91,23 @@
                             </li>
                             <li>
                                 <div>
-
                                     <ul>
-                                        <li class="mobile-nav__link"><a href="">Register</a></li>
-                                        <li class="mobile-nav__btn"><a href="{%url 'login'%}" class="btn">Login</a></li>
+                                    {% if user.is_authenticated %}
+                                        <li>
+                                            <a href="{% url 'logout' %}" class="mobile-nav__link">Log Out</a>
+                                        </li>
+                                    {%else%}
+                                        <li>
+                                            <a href="{%url 'register'%}" class="mobile-nav__link">Register</a>
+                                        </li>
+
+                                        <li>
+                                            <a class="mobile-nav__btn" href="{%url 'login'%}">Login</a>
+                                        </li>
+                                    {%endif%}
                                     </ul>
                                 </div>
                             </li>
-
                         </ul>
                     </nav>
                  </div>
