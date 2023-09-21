@@ -1,0 +1,119 @@
+{% load static %}
+{% load custom_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{%block title%}Lirez{%endblock%}</title>
+    <link rel="stylesheet" href="{% static 'learning/styles.css' %}">
+    <script src="{% static 'learning/main.js' %}"></script>
+</head>
+
+<body>
+
+    <header class="header container">
+        <nav>
+            <ul class="header__menu">
+                <li>
+                    <a class ="header__link"href="{%url 'home'%}">Home</a>
+                </li>
+                <li>
+                    <a class ="header__link"href="{%url 'courses'%}">Courses</a>
+                </li>
+                <li>
+                    <a class ="header__link"href="{%url 'staff'%}">Staff</a>
+                </li>
+
+                <li>
+                    <a href="{%url 'dashboard'%}" class="header__link">dashboard</a>
+                </li>
+
+                <li class="header__line"></li>
+
+                <li >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="theme-toggle">
+                        <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+                    </svg>                      
+                </li>
+
+                <li>
+                    <a href="{%url 'register'%}" class="header__link">Register</a>
+                </li>
+
+                <li>
+                   <a class ="header__login btn" href="{%url 'login'%}">Login</a> 
+                </li>
+
+            </ul>
+
+            <button class="header__bars">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" >
+                    <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+                  </svg>
+                  
+            </button>
+
+
+        </nav>
+
+        
+    </header>
+
+                <!--Mobile navigation-->
+                <div class="mobile-nav">
+                    <nav>
+                        <ul class="mobile-nav__menu">
+                            <li><a href="{%url 'home'%}" class="mobile-nav__link">Home</a></li>
+                            <li><a href="{%url 'courses'%}" class="mobile-nav__link">Courses</a></li>
+                            <li><a href="{%url 'staff'%}" class="mobile-nav__link">staff</a></li>
+                            <li><a href="{%url 'dashboard'%}" class="mobile-nav__link">dashboard</a></li>
+                            <li class="mobile-nav__link-line"></li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mobile-nav__theme-toggle">
+                                    <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+                                  </svg>                      
+                            </li>
+                            <li>
+                                <div>
+
+                                    <ul>
+                                        <li class="mobile-nav__link"><a href="">Register</a></li>
+                                        <li class="mobile-nav__btn"><a href="{%url 'login'%}" class="btn">Login</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </nav>
+                 </div>
+            <!--end of mn-->
+    <main>
+        {%block body%}
+        {%endblock%}
+    </main>
+    <footer class="footer container">
+
+        <!-- Remove the container if you want to extend the Footer to full width. -->
+        <div class="container my-5">
+            <!-- Footer -->
+            <footer>
+                <div class="footer">
+                    <div class="about">
+                        <h3>About Us</h3>
+                        <p>We are a company dedicated to providing the best service to our customers.</p>
+                    </div>
+                    <div class="contact">
+                        <h3>Contact Us</h3>
+                        <p>Email: info@company.com</p>
+                        <p>Phone: 123-456-7890</p>
+                    </div>
+                    <div class="copyright">
+                        <p>© 2023 Company Name. All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+
+</body>
+
+</html>

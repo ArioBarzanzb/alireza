@@ -1,0 +1,73 @@
+{%extends 'learning/layout.html'%}
+{% block title %}Course{% endblock %}
+{% block body %}
+    {% comment %} <form method="POST" action="{% url 'youtube_to_iframe' %}">
+        {% csrf_token %}
+        <input type="text" name="youtube_link" placeholder="Enter YouTube Link">
+        <button type="submit">Convert</button>
+    </form>
+
+    {% if video_url %}
+        <iframe src="{{ video_url }}" frameborder="0" allowfullscreen></iframe>
+    {% endif %}
+
+    {% if error_message %}
+        <p>{{ error_message }}</p>
+    {% endif %} {% endcomment %}
+    <div class="card" style="margin: 1rem;">
+        <div class="info">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+             <p class="teacher">Teacher : mamad</p>
+        </div>
+
+        <div class="info">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6">
+                <path stroke-linecap="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />
+              </svg>                  
+             <p class="parts">Number of videos : 4</p>
+        </div>
+
+        <div class="info">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11.732a9 9 0 01-6.085-.711l-.108-.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5" />
+              </svg>
+              
+             <p class="status">Course status : not finished yet</p>
+        </div>
+
+        <div class="info">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+              </svg>
+              
+             <p class="dofu">Date of last update : yesterday</p>
+        </div>
+
+
+    </div>
+    <div class="card content" style="padding: 2rem;">
+        <strong>course info</strong>
+       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio dignissimos ab officia earum illo tempore laborum, suscipit atque numquam alias cupiditate soluta eum voluptatum voluptate, dolorum ex aspernatur nulla nam tempora autem. Dolore laudantium reiciendis, vero aperiam fuga inventore culpa repellat eos animi atque rem enim sint doloribus qui magnam? Non consequuntur tenetur deleniti voluptates nihil ipsa et ipsum quae consectetur, sint iste ipsam quaerat minus tempore reprehenderit! Quibusdam deserunt ullam recusandae aliquam quidem corporis, velit eos quaerat sed dolorem hic incidunt omnis nulla fugiat doloremque ut, earum officiis tempora. Neque soluta perferendis corrupti quaerat, vitae distinctio quidem a repudiandae, dignissimos fugit ab non expedita saepe harum reprehenderit necessitatibus sunt voluptatum laboriosam, sit eveniet facere magni? Itaque illum sapiente culpa ipsam voluptate rerum soluta! Architecto rem fugit sint aperiam, nihil error distinctio est tenetur, ducimus delectus amet et commodi inventore magni maxime aliquam? Fugit aut corrupti, consectetur a ducimus debitis dolorum, minima recusandae reiciendis, totam consequuntur temporibus blanditiis fuga aliquam placeat eos ab? Asperiores magnam illum, animi eveniet voluptates maxime ratione et consequatur numquam obcaecati at adipisci quis natus accusantium rem ex, ducimus corporis laboriosam recusandae labore assumenda! Provident officiis temporibus ullam quas animi, dolorum incidunt magnam accusantium, consectetur hic delectus nesciunt placeat, cupiditate repellendus quod quo enim? Quo similique in debitis vero reiciendis eos eveniet quia dolorum consequuntur totam, illum accusantium. Magni itaque nisi tempore eveniet, omnis vero odit dolor modi numquam, consectetur porro cupiditate earum mollitia illo! Voluptatum, obcaecati nulla? Voluptatum quisquam ipsa porro assumenda in, deserunt illum rem. Dolore, officiis! Nulla, mollitia. Quo error voluptatibus dolore? Dolores quisquam blanditiis laboriosam voluptatem, reiciendis repellendus accusantium voluptate sit dicta explicabo beatae. Modi quidem pariatur distinctio quos fuga alias delectus ducimus magni, repellat possimus. Praesentium aperiam quae sunt, dolor quas nesciunt nobis rerum et dolore repudiandae. Nihil iure amet voluptatibus consectetur ducimus unde, incidunt quibusdam officiis libero, consequuntur assumenda? Facilis, ratione ea quasi ipsam porro dicta at? Tempore quaerat repellat voluptate, quo cumque error ut non blanditiis, dignissimos quod voluptates adipisci ducimus voluptatum minus, exercitationem laborum fugiat natus unde nulla iusto? Excepturi deserunt perspiciatis voluptatibus voluptas ipsum. Dolores delectus soluta atque dolore maxime id impedit, laboriosam quidem recusandae saepe assumenda doloribus ab inventore dolorum laborum, autem voluptates nisi neque possimus reprehenderit cum? Iusto, minus, ad aliquam corporis, aspernatur unde libero quis accusantium similique odit ipsum necessitatibus et. Exercitationem voluptatibus non officia corrupti quam dolorem velit voluptate doloribus recusandae! Animi sequi tempore quo officiis reiciendis, consequuntur, voluptates delectus ea corporis, quod aspernatur dolor aperiam soluta ipsam mollitia fugiat deserunt nemo quis debitis blanditiis est expedita amet? Debitis vitae, ea, molestiae porro odio recusandae consequuntur repudiandae earum tenetur sint in sequi libero dolore magni praesentium, voluptatum dolores? Suscipit alias asperiores, optio voluptatem sint cumque illum! Corporis quia id quo doloribus voluptatum in maxime placeat aliquid repellat reiciendis facilis, libero error tenetur voluptatem, magni, quas dolores. Iusto omnis mollitia, accusamus doloremque voluptate fugiat labore quam quis soluta perspiciatis doloribus esse. Libero culpa, cumque incidunt voluptatem, vel at fuga maxime expedita aperiam molestiae porro!</p>
+    </div>
+    <div class="course">
+        <strong>part 1</strong>
+        <iframe src="https://www.youtube.com/embed/c74kMCOmP80?si=wRohbi2b-u_bnaeR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <div class="course">
+        <strong>part 1</strong>
+        <iframe src="https://www.youtube.com/embed/c74kMCOmP80?si=wRohbi2b-u_bnaeR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <div class="course">
+        <strong>part 1</strong>
+        <iframe src="https://www.youtube.com/embed/c74kMCOmP80?si=wRohbi2b-u_bnaeR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <div class="course">
+        <strong>part 1</strong>
+        <iframe src="https://www.youtube.com/embed/c74kMCOmP80?si=wRohbi2b-u_bnaeR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+{% endblock %}

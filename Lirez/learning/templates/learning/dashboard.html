@@ -1,0 +1,22 @@
+{% extends 'learning/layout.html' %}
+{%block title%}Lirez - Dashboard{%endblock%}
+{%block body%}
+{% for course in dashboard_courses %}
+   <div class="d-cards">
+      <div class="d-card">
+         <img src="{{ course.image.url }}" alt="Course Image">
+         <div>
+            <strong>{{ course.title }}</strong>
+            <br>
+            <br>
+            <p>{{ course.description }}</p>
+            <br>
+            <a href="" class="btn">Click me!</a>
+         </div>
+      </div>      
+   </div>
+{% empty %}
+   <h2>No Courses In Dashboard Yet!</h2>
+{% endfor %}
+
+{%endblock%}

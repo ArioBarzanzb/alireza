@@ -1,0 +1,64 @@
+{% extends 'learning/layout.html' %}
+
+{%block title%}Lirez - Register{%endblock%}
+
+
+{%block body%}
+
+{% if message %}
+    <div class="error-message">{{ message }}</div>
+{% endif %}
+
+<form action="{% url 'register' %}" method="post" class="register-container" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form form__group">
+        <h1>Register</h1>
+        <div class="form__group">
+            <label for="email">Email Address</label>
+            <input class="form__group input" type="email" name="email" id="email" placeholder="Email Address">
+        </div>
+        <div class="form__group">
+            <label for="password">Password</label>
+            <input class="form__group input" type="password" name="password" id="password" placeholder="Password">
+        </div>
+        <div class="form__group">
+            <label for="confirmation">Confirm Password</label>
+            <input class="form__group input" type="password" name="confirmation" id="confirmation" placeholder="Confirm Password">
+        </div>
+
+        <div class="form__group">
+            <label for="user_type">User Type</label>
+            <select class="form__group input" name="user_type" id="user_type">
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+            </select>
+        </div>
+        
+        <div id="teacher-fields" style="display: none;">
+            <div class="form__group">
+                <label for="first_name">First Name</label>
+                <input class="form__group input" type="text" name="firstname" id="first_name" placeholder="First Name">
+            </div>
+            <div class="form__group">
+                <label for="last_name">Last Name</label>
+                <input class="form__group input" type="text" name="lastname" id="last_name" placeholder="Last Name">
+            </div>
+            <div class="form__group">
+                <label for="resume">Resume</label>
+                <textarea class="form__group input" name="resume" id="resume" ></textarea>
+            </div>
+            <div class="form__group">
+                <label for="image">Profile Pic(Optional)</label>
+                <input type="file" id="image" name="profile_pic" accept=".jpg, .jpeg, .png">
+            </div>
+        </div> 
+    
+        <div class="form__submit">
+            <input class="btn btn-primary" type="submit" value="Register">
+        </div>
+        <p>Already have an account? <a href="{% url 'login' %}">Log In here.</a></p>
+    </div>
+</form>
+
+
+{%endblock%}
